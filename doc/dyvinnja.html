@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>dyvinnja.pl</title>
+
+<link rel="stylesheet" type="text/css" href="pldoc.css">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+<body>
+
+
+<h1 class="file"><span style="float:right"></span>dyvinnja.pl</h1>
+
+<dl>
+<dt class="multidef"><span style="float:right">&nbsp;</span><a name="примітне/1"><b class="pred">примітне</b><var class="arglist">(Що)</var></a> is <b class="det">nondet</b><span class="anot" style="float:right">[multifile]</span></dt><dd class="defbody">Правда, коли визначено предикати <code>опис(Що, _Опис)</code>.</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="неістота/1"><b class="pred">неістота</b><var class="arglist">(Що)</var></a> is <b class="det">det</b></dt><dd class="defbody">Правда, коли <var>Що</var> не є істотою.</dd>
+<dt class="multidef"><span style="float:right">&nbsp;</span><a name="див/1"><b class="pred">див</b><var class="arglist">(Що)</var></a> is <b class="det">semidet</b><span class="anot" style="float:right">[multifile]</span></dt><dd class="defbody">Реалізація команд 'див <var>Що</var>', 'подивитися на <var>Що</var>' тощо.
+
+<p>
+Виводить описи предметів, що задані через <a class="extmanual" href="http://www.swi-prolog.org/pldoc/man?predicate=%D0%BE%D0%BF%D0%B8%D1%81/2">опис/2</a>,3, <a class="extmanual" href="http://www.swi-prolog.org/pldoc/man?predicate=%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE/2">детально/2</a> та
+<a class="extmanual" href="http://www.swi-prolog.org/pldoc/man?predicate=%D0%BE%D0%BF%D0%B8%D1%81%D1%83%D1%94/2">описує/2</a>. В основних описах, тобто тих що задано через <a class="extmanual" href="http://www.swi-prolog.org/pldoc/man?predicate=%D0%BE%D0%BF%D0%B8%D1%81/2">опис/2</a>, усуває
+розмітку стилювання назв сцен. Таким чином, шматки описів на кшталт
+"&gt;бубубу&lt;" заміняються на "бубубу".</p>
+
+<p>
+По замовчуванню, коли <var>Що</var> недосяжне, <code>див(Що)</code> завершується невдачею і
+виставляє помилку 'Не бачу тут такого' за допомогою <a class="extmanual" href="pldoc/doc_for?object=user%3A%D0%B2%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B0_%D0%BF%D0%BE%D0%BC%D0%B8%D0%BB%D0%BA%D0%B0/1">встановлена_помилка/1</a>.</p>
+
+<p>
+Автор може означити варіанти <code>див(Що)</code> перед консультуванням з <a class="file" href=".">dyvinnja.pl</a>.
+Тоді автор сам визначає досяжність <var>Що</var>.</p></dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="див_напрям/1"><b class="pred">див_напрям</b><var class="arglist">(Напрям)</var></a></dt><dd class="defbody">Подивитися у напрямі <var>Напрям</var>. Пригода розуміє обмежену кількість напрямів,
+див <a class="extmanual" href="http://www.swi-prolog.org/pldoc/man?predicate=%D0%BD%D0%B0%D0%BF%D1%80%D1%8F%D0%BC/1">напрям/1</a>.
+
+<p>
+Автор може означити свої напрями за допомогою <a class="extmanual" href="http://www.swi-prolog.org/pldoc/man?predicate=%D0%BD%D0%B0%D0%BF%D1%80%D1%8F%D0%BC/1">напрям/1</a> й <a class="extmanual" href="pldoc/doc_for?object=user%3A%D0%B4%D0%B8%D0%B2_%D0%BD%D0%B0%D0%BF%D1%80%D1%8F%D0%BC/1">див_напрям/1</a>.</p></dd>
+</dl>
+
+</body>
+</html>

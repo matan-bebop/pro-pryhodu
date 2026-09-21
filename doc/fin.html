@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>fin.pl</title>
+
+<link rel="stylesheet" type="text/css" href="pldoc.css">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+<body>
+
+
+<h1 class="file"><span style="float:right"></span>fin.pl</h1>
+
+<dl>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="з_великої_літери/2"><b class="pred">з_великої_літери</b><var class="arglist">(Що, ЩоЗВеликоїЛітери)</var></a> is <b class="det">det</b></dt><dd class="defbody">Правда коли <var>ЩоЗВеликоїЛітери</var> є те ж саме що й <var>Що</var>, але з першою великою
+літерою.</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="з_малої_літери/2"><b class="pred">з_малої_літери</b><var class="arglist">(Що, ЩоЗМалоїЛітери)</var></a> is <b class="det">det</b></dt><dd class="defbody">Правда коли <var>ЩоЗМалоїЛітери</var> є те ж саме що й <var>Що</var>, але з першою великою
+літерою.</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="якщо_є/1"><b class="pred">якщо_є</b><var class="arglist">(:Терм)</var></a> is <b class="det">det</b></dt><dd class="defbody">Виконує <var>Терм</var>, якщо такий предикат визначено. Завжди правда.
+
+<p>
+Використовує <code>call(Терм)</code>, тож всі обрізання (!/0) всередині <var>Терм</var> впливаються
+лише на галудження в <var>Терм</var>.</p>
+
+<dl class="tags">
+<dt class="keyword-see">See also</dt><dd class="keyword-see">- всі_якщо_є</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="всі_якщо_є/1"><b class="pred">всі_якщо_є</b><var class="arglist">(:Терм)</var></a> is <b class="det">det</b></dt><dd class="defbody">Виконує всі варіанти <var>Терм</var>, якщо такий предикат визначено. Завжди правда.
+
+<p>
+Використовує <code>call(Терм)</code>, тож всі обрізання (!/0) всередині <var>Терм</var> впливаються
+лише на галудження в <var>Терм</var>.</p>
+
+<dl class="tags">
+<dt class="keyword-see">See also</dt><dd class="keyword-see">- якщо_є</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="знаходження/3"><b class="pred">знаходження</b><var class="arglist">(Прийменник, Де, Що)</var></a> is <b class="det">det</b></dt><dd class="defbody">Правда коли <var>Прийменник</var> == в і <code>в(Де, Що)</code>; те саме для на і під.</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="десь_в/4"><b class="pred">десь_в</b><var class="arglist">(Де, Що, Знаходження, +Доступності)</var></a> is <b class="det">nondet</b></dt><dd class="defbody">Правда коли <var>Що</var> знаходиться десь в <var>Де</var>, причому <var>Знаходження</var> є терм який описує
+знаходження <var>Що</var> на самому останньому рівні. Тобто, якщо <code>в(кімната, стіл)</code>,
+<code>на(стіл, ваза)</code> і <code>в(ваза, жаба)</code>, то правда що десь_в(кімната, жаба, <code>в(ваза,
+жаба)</code>. Водночас, всі знаходження що ведуть до останнього, задовольняють
+доступності з множин <var>Доступності</var> чи ІншіДоступності. Всі доступності
+перевіряються за допомогою <a class="extmanual" href="pldoc/doc_for?object=user%3A%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BD%D0%BE/3">доступно/3</a>.</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="десь_в/3"><b class="pred">десь_в</b><var class="arglist">(Де, Що, Знаходження)</var></a> is <b class="det">nondet</b></dt><dd class="defbody">Правда, коли <var>Що</var> десь в <var>Де</var> з останнім знаходженням <var>Знаходження</var>, можливо,
+«вкладене» в/на/під тощо інші предмети.
+
+<p>
+Обгортка до <a class="extmanual" href="pldoc/doc_for?object=user%3A%D0%B4%D0%B5%D1%81%D1%8C_%D0%B2/4">десь_в/4</a>.</p></dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="десь_в/2"><b class="pred">десь_в</b><var class="arglist">(Де, Що)</var></a> is <b class="det">nondet</b></dt><dd class="defbody">Правда, коли <var>Що</var> десь в <var>Де</var>, можливо, «вкладене» в/на/під тощо інші предмети.
+Обгортка до <a class="extmanual" href="http://www.swi-prolog.org/pldoc/man?predicate=%D0%B4%D0%B5%D1%81%D1%8C_%D0%B2/5">десь_в/5</a>.</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="якщо_можна/1"><b class="pred">якщо_можна</b><var class="arglist">(+Терм)</var></a> is <b class="det">det</b></dt><dd class="defbody">Правда, якщо можна робити дію над предметом, якій відповідає <var>Терм</var> і, водночас,
+якщо виклик <var>Терм</var> завершується успіхом.</dd>
+<dt class="multidef"><span style="float:right">&nbsp;</span><a name="дія/2"><b class="pred">дія</b><var class="arglist">(Предикат, Дієслова)</var></a> is <b class="det">nondet</b><span class="anot" style="float:right">[multifile]</span></dt><dd class="defbody">Правда, коли дієслова у списку <var>Дієслова</var> відповідають предикату дії <var>Предикат</var>.
+У <var>Дієслова</var> мають бути всі форми, які сприймає гра, зокрема усякої особи.
+За замовчуванням, серед цих форм є інфінітивна (як-то 'взяти') та
+спонукальна форма другої особи (як-то 'візьми').</dd>
+<dt class="multidef"><span style="float:right">&nbsp;</span><a name="істота/1"><b class="pred">істота</b><var class="arglist">(Щось)</var></a> is <b class="det">nondet</b><span class="anot" style="float:right">[multifile]</span></dt><dd class="defbody">Правда, коли <var>Щось</var> є істотою. Автор має визначати факти і предикати з <a class="extmanual" href="pldoc/doc_for?object=user%3A%D1%96%D1%81%D1%82%D0%BE%D1%82%D0%B0/1">істота/1</a>.
+По-замовчуванню, <var>Щось</var> не істота.
+
+<p>
+Використовується для виводу опису сцени і для відмінювання. Щоби оголошення
+чогось істотою було використано в автоматичному відмінюванні в <a class="file" href="init.html">init.pl</a>, треба
+визначати факт <code>істота(Щось)</code> перед <code>в(_Де, Щось)</code>, <code>головний_відмінок(Щось,
+_Головний)</code> і <code>синоніми(_Головний, [Щось|_Решта])</code>.</p>
+
+<dl class="tags">
+<dt class="keyword-see">See also</dt><dd class="keyword-see">- <a class="extmanual" href="pldoc/doc_for?object=user%3A%D0%BD%D0%B5%D1%96%D1%81%D1%82%D0%BE%D1%82%D0%B0/1">неістота/1</a></dd>
+</dl>
+
+</dd>
+<dt class="multidef"><span style="float:right">&nbsp;</span><a name="можна/3"><b class="pred">можна</b><var class="arglist">(Дія, Прийменник, Предмет)</var></a> is <b class="det">nondet</b><span class="anot" style="float:right">[multifile]</span></dt><dd class="defbody">Правда як <var>Дія</var> <var>Прийменник</var> <var>Предмет</var> є можливою дією. Перевіряється в команда//.
+
+<p>
+<var>Прийменник</var> == 'в' означає також, що замість 'в' у команді можливе і 'у'.</p>
+
+<p>
+<var>Прийменник</var> == [] означає, що прийменник відсутній. За замовчяуванням,
+<code>можна(Дія, [], Предмет)</code> правда, коли <code>можна(Дія, Предмет)</code>.</p>
+
+<p>
+<var>Предмет</var> == [] означає, що йдеться про однослівну команду, як-то 'оглянутися'.
+За замовчуванням, <code>можна(Дія, [], [])</code> правда, коли <code>можна(Дія)</code>.</p>
+
+<p>
+Автор може "перехоплювати" <a class="extmanual" href="pldoc/doc_for?object=user%3A%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0/3">можна/3</a> які означені Пригодою. Навіть заборонити
+хоч і всі команди—якщо визначить <code>можна(_, _, _)</code> :- !, fail.</p>
+
+<dl class="tags">
+<dt class="keyword-see">See also</dt><dd class="keyword-see">- <a class="extmanual" href="http://www.swi-prolog.org/pldoc/man?predicate=%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0/2">можна/2</a>, <a class="extmanual" href="http://www.swi-prolog.org/pldoc/man?predicate=%D0%BC%D0%BE%D0%B6%D0%BD%D0%B0/1">можна/1</a></dd>
+</dl>
+
+</dd>
+</dl>
+
+</body>
+</html>

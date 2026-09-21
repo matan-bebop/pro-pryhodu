@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>pomylky.pl</title>
+
+<link rel="stylesheet" type="text/css" href="pldoc.css">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+<body>
+
+
+<h1 class="file"><span style="float:right"></span>pomylky.pl</h1>
+
+<dl>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="рівень_розбору/1"><b class="pred">рівень_розбору</b><var class="arglist">(+Номер)</var></a> is <b class="det">det</b></dt>
+<dt class="pubdef"><b class="pred">рівень_розбору</b><var class="arglist">(-Номер)</var> is <b class="det">det</b></dt><dd class="defbody">Встановити чи дістати <var>Номер</var> рівня, до котрого ми дійшли під час розбору
+речення. По поверненню до точки галуження відновлюється <var>Номер</var> котрий
+встановлено до галуження.
+
+<dl class="tags">
+<dt class="keyword-see">See also</dt><dd class="keyword-see">- <a class="extmanual" href="http://www.swi-prolog.org/pldoc/man?predicate=%D1%81%D0%BF%D0%BE%D0%B2%D1%96%D1%89%D0%B5%D0%BD%D0%BD%D1%8F_%D0%BF%D0%BE%D0%BC%D0%B8%D0%BB%D0%BA%D0%B8/1">сповіщення_помилки/1</a>.</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="треба_записувати_помилку/0"><b class="pred">треба_записувати_помилку</b></a> is <b class="det">det</b></dt><dd class="defbody">Правда, якщо помилка записується вперше або нинішній рівень розбору вищий за
+рівень записаної помилки. Використовується в <a class="extmanual" href="pldoc/doc_for?object=user%3A%D0%B2%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B0_%D0%BF%D0%BE%D0%BC%D0%B8%D0%BB%D0%BA%D0%B0/1">встановлена_помилка/1</a>.</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="встановлена_помилка/1"><b class="pred">встановлена_помилка</b><var class="arglist">(++Помилка)</var></a> is <b class="det">det</b></dt>
+<dt class="pubdef"><b class="pred">встановлена_помилка</b><var class="arglist">(-Помилка)</var> is <b class="det">det</b></dt><dd class="defbody">Встановлює чи зчитує помилку <var>Помилка</var>. При встановленні, вона
+запамʼятовується навіть коли <a class="extmanual" href="pldoc/doc_for?object=user%3A%D0%B2%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B0_%D0%BF%D0%BE%D0%BC%D0%B8%D0%BB%D0%BA%D0%B0/1">встановлена_помилка/1</a> викликався під час
+розгляду варіанту, який згодом відкинуто. Якщо <var>Помилка</var> є змінною без
+значення, себто, \+ <code>ground(Помилка)</code>, встановити в <var>Помилка</var> поточну помилку.
+
+<dl class="tags">
+<dt class="keyword-see">See also</dt><dd class="keyword-see">- <a class="extmanual" href="pldoc/doc_for?object=user%3Ab_%D0%B2%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B0_%D0%BF%D0%BE%D0%BC%D0%B8%D0%BB%D0%BA%D0%B0/1">b_встановлена_помилка/1</a>, <a class="extmanual" href="http://www.swi-prolog.org/pldoc/man?predicate=%D1%81%D0%BF%D0%BE%D0%B2%D1%96%D1%81%D1%82%D0%B8%D1%82%D0%B8_%D0%BF%D0%BE%D0%BC%D0%B8%D0%BB%D0%BA%D1%83_%D0%B2/2">сповістити_помилку_в/2</a>, <a class="extmanual" href="pldoc/doc_for?object=user%3A%D1%81%D0%BF%D0%BE%D0%B2%D1%96%D1%81%D1%82%D0%B8%D1%82%D0%B8_%D0%BF%D0%BE%D0%BC%D0%B8%D0%BB%D0%BA%D1%83/1">сповістити_помилку/1</a>,
+<a class="extmanual" href="pldoc/doc_for?object=user%3A%D1%81%D0%BF%D0%BE%D0%B2%D1%96%D1%81%D1%82%D0%B8%D1%82%D0%B8_%D0%BF%D0%BE%D0%BC%D0%B8%D0%BB%D0%BA%D1%83/2">сповістити_помилку/2</a></dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="b_встановлена_помилка/1"><b class="pred">b_встановлена_помилка</b><var class="arglist">(++Помилка)</var></a> is <b class="det">det</b></dt><dd class="defbody">Встановлює—але так що це можна відкинути (backtractable)—помилку <var>Помилка</var>.
+Тобто, помилка не зберігається коли варіант, звідки викликався
+b_встановлена_помилка, відкинуто.
+
+<dl class="tags">
+<dt class="keyword-see">See also</dt><dd class="keyword-see">- <a class="extmanual" href="pldoc/doc_for?object=user%3A%D0%B2%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B0_%D0%BF%D0%BE%D0%BC%D0%B8%D0%BB%D0%BA%D0%B0/1">встановлена_помилка/1</a>, <a class="extmanual" href="http://www.swi-prolog.org/pldoc/man?predicate=%D1%81%D0%BF%D0%BE%D0%B2%D1%96%D1%81%D1%82%D0%B8%D1%82%D0%B8_%D0%BF%D0%BE%D0%BC%D0%B8%D0%BB%D0%BA%D1%83_%D0%B2/2">сповістити_помилку_в/2</a>, <a class="extmanual" href="pldoc/doc_for?object=user%3A%D1%81%D0%BF%D0%BE%D0%B2%D1%96%D1%81%D1%82%D0%B8%D1%82%D0%B8_%D0%BF%D0%BE%D0%BC%D0%B8%D0%BB%D0%BA%D1%83/1">сповістити_помилку/1</a>,
+<a class="extmanual" href="pldoc/doc_for?object=user%3A%D1%81%D0%BF%D0%BE%D0%B2%D1%96%D1%81%D1%82%D0%B8%D1%82%D0%B8_%D0%BF%D0%BE%D0%BC%D0%B8%D0%BB%D0%BA%D1%83/2">сповістити_помилку/2</a></dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="сповістити_помилку_в/1"><b class="pred">сповістити_помилку_в</b><var class="arglist">(++СловаРечення)</var></a> is <b class="det">det</b></dt><dd class="defbody">Сповістити про помилку в реченні зі словами як у списку <var>СловаРечення</var>—ту,
+яку наразі виставлено. Викликає <a class="extmanual" href="pldoc/doc_for?object=user%3A%D1%81%D0%BF%D0%BE%D0%B2%D1%96%D1%81%D1%82%D0%B8%D1%82%D0%B8_%D0%BF%D0%BE%D0%BC%D0%B8%D0%BB%D0%BA%D1%83/2">сповістити_помилку/2</a>.</dd>
+<dt class="multidef"><span style="float:right">&nbsp;</span><a name="сповістити_помилку/2"><b class="pred">сповістити_помилку</b><var class="arglist">(++Помилка, ++СловаРечення)</var></a> is <b class="det">det</b><span class="anot" style="float:right">[multifile]</span></dt><dd class="defbody">Сповістити про помилку <var>Помилка</var> в реченні зі словами як у списку <var>СловаРечення</var>.
+
+<p>
+Користувач Пригоди може переозначити <a class="extmanual" href="pldoc/doc_for?object=user%3A%D1%81%D0%BF%D0%BE%D0%B2%D1%96%D1%81%D1%82%D0%B8%D1%82%D0%B8_%D0%BF%D0%BE%D0%BC%D0%B8%D0%BB%D0%BA%D1%83/2">сповістити_помилку/2</a>. По замовчуванню,
+предикат викликає <code>сповістити_помилку(Помилка)</code> і не звертає уваги на
+<var>СловаРечення</var>.</p></dd>
+<dt class="multidef"><span style="float:right">&nbsp;</span><a name="сповістити_помилку/1"><b class="pred">сповістити_помилку</b><var class="arglist">(++Помилка)</var></a> is <b class="det">det</b><span class="anot" style="float:right">[multifile]</span></dt><dd class="defbody">Сповістити про помилку <var>Помилка</var>. По замовчуванню, герой просто оголошує
+<var>Помилка</var> за допомогою предикату <a class="extmanual" href="pldoc/doc_for?object=user%3A%D0%BA%D0%B0%D0%B6%D0%B5/1">каже/1</a>. Користувач Пригоди може переозначити
+<a class="extmanual" href="pldoc/doc_for?object=user%3A%D1%81%D0%BF%D0%BE%D0%B2%D1%96%D1%81%D1%82%D0%B8%D1%82%D0%B8_%D0%BF%D0%BE%D0%BC%D0%B8%D0%BB%D0%BA%D1%83/1">сповістити_помилку/1</a>.</dd>
+</dl>
+
+</body>
+</html>

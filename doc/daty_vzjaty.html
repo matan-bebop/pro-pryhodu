@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>daty_vzjaty.pl</title>
+
+<link rel="stylesheet" type="text/css" href="pldoc.css">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+<body>
+
+
+<h1 class="file"><span style="float:right"></span>daty_vzjaty.pl</h1>
+
+<dl>
+<dt class="multidef"><span style="float:right">&nbsp;</span><a name="повно/1"><b class="pred">повно</b><var class="arglist">(Знаходження)</var></a> is <b class="det">nondet</b><span class="anot" style="float:right">[multifile]</span></dt><dd class="defbody">Користувач Пригоди може визначити для якогось предмета повно(<code>в(Контейнер,
+предмет)</code>; замість <a class="extmanual" href="http://www.swi-prolog.org/pldoc/man?predicate=%D0%B2/2">в/2</a> може бути будь-який інший предикат який використовується
+для визначення знаходження. Тоді, коли гравець підбирає такий предмет, цей
+предмет також і залишається де був. Наприклад, після "взяти хмизу" в лісі,
+хмиз все ще залишається в лісі.
+
+<p>
+За замовчуванням, <code>повно(_)</code> є неправдою. </p></dd>
+<dt class="multidef"><span style="float:right">&nbsp;</span><a name="незліченне/1"><b class="pred">незліченне</b><var class="arglist">(Знаходження)</var></a> is <b class="det">semidet</b><span class="anot" style="float:right">[multifile]</span></dt><dd class="defbody">Правда коли <var>Знаходження</var> не можна перелічити, так як наприклад дерева в лісі
+чи борошно. По замовчуванню, правда лише коли <code>повно(Знаходження)</code>.</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="багато/1"><b class="pred">багато</b><var class="arglist">(:Знаходження)</var></a> is <b class="det">nondet</b></dt><dd class="defbody">Правда, коли <code>повно(Знаходження)</code> чи коли <var>Знаходження</var> встановлено в базі фактів
+більше одного разу.</dd>
+</dl>
+
+</body>
+</html>

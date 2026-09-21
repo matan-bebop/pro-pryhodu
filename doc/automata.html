@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>automata.pl</title>
+
+<link rel="stylesheet" type="text/css" href="pldoc.css">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+<body>
+
+
+<h1 class="file"><span style="float:right"></span>automata.pl</h1>
+
+<dl>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="раз/2"><b class="pred">раз</b><var class="arglist">(N, +Лічильник)</var></a> is <b class="det">semidet</b></dt><dd class="defbody">Правда, коли терм <code>раз(_, Лічильник)</code> викликається в <var>N</var>-тий раз.</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="зараз_разів/2"><b class="pred">зараз_разів</b><var class="arglist">(+Лічильник, N)</var></a> is <b class="det">semidet</b></dt><dd class="defbody">Правда, коли терм <code>раз(_, Лічильник)</code> викликався <var>N</var> разів. Тобто, на відміну від
+власне <a class="extmanual" href="pldoc/doc_for?object=user%3A%D1%80%D0%B0%D0%B7/2">раз/2</a>, предикат <a class="extmanual" href="pldoc/doc_for?object=user%3A%D0%B7%D0%B0%D1%80%D0%B0%D0%B7_%D1%80%D0%B0%D0%B7%D1%96%D0%B2/2">зараз_разів/2</a> не прирощує лічильник який відповідає
+терму <code>раз(_, Лічильник)</code>.</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="наступний/2"><b class="pred">наступний</b><var class="arglist">(+Автомат, +Стан)</var></a> is <b class="det">det</b></dt><dd class="defbody">Встановити наступний стан скінченно-станового <var>Автомат</var>-у. <var>Автомат</var> може
+бути визначеним твердженням.</dd>
+<dt class="multidef"><span style="float:right">&nbsp;</span><a name="черга/2"><b class="pred">черга</b><var class="arglist">(+Автомат, +Стан)</var></a> is <b class="det">det</b><span class="anot" style="float:right">[multifile]</span></dt><dd class="defbody">Правда коли наступним станом <var>Автомат</var>-у має бути <var>Стан</var>. <var>Автомат</var> може
+бути визначеним твердженням.</dd>
+</dl>
+
+</body>
+</html>

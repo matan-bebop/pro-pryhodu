@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>init.pl</title>
+
+<link rel="stylesheet" type="text/css" href="pldoc.css">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+<body>
+
+
+<h1 class="file"><span style="float:right"></span>init.pl</h1>
+
+<dl>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="пригодове/1"><b class="pred">пригодове</b><var class="arglist">(+Файли)</var></a></dt><dd class="defbody">Завантажує <var>Файли</var> з «Пригоди», тобто зі шляху, що заданий <a class="extmanual" href="http://www.swi-prolog.org/pldoc/man?predicate=pryhoda/1">pryhoda/1</a>.
+
+<p>
+Частини Пригоди описують команди, що їх автор може не хотіти у своїй грі.
+Тому такі опційні частини слід завантажувати чи за допомогою <a class="extmanual" href="pldoc/doc_for?object=user%3A%D0%BF%D1%80%D0%B8%D0%B3%D0%BE%D0%B4%D0%BE%D0%B2%D0%B5/1">пригодове/1</a>,
+чи напряму як [<code>pryhoda(chastyna)</code>].</p>
+
+<p>
+Обидві можливості використовують задання шляху до файлів Пригоди через
+<a class="extmanual" href="http://www.swi-prolog.org/pldoc/man?predicate=pryhoda/1">pryhoda/1</a>. Цей предикат автор має визначити самостійно, наприклад як</p>
+
+<p>
+:- <code>file_search_path(pryhoda, "pryhoda/")</code>,</p>
+
+<p>
+перед завантаженням будь-яких пригодових файлів.</p></dd>
+</dl>
+
+</body>
+</html>
