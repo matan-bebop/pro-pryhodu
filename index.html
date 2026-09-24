@@ -152,7 +152,13 @@
 <script src="hra/swipl-bundle-devel.js"></script>
 <script src="hra/swipl-interface.js"></script>
 
-<script> new_game("hra/1.qlf") </script>
+<script>
+new_game("hra/1.qlf")
+document.addEventListener("scroll", (event) => {
+  if(window.pageYOffset > input.getBoundingClientRect().y)
+    input.focus()
+});
+</script>
 
 
 <h3><a href="vstup-1.html">Як це працює?</a></h3>

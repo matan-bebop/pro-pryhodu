@@ -14,7 +14,8 @@ var swipl_options = {
         const br = document.createElement("br")
         last_par.appendChild(br)
       }
-      prompt_line.scrollIntoView(false)
+      if(document.activeElement === input)
+        prompt_line.scrollIntoView(false)
     }
   }
 };
@@ -58,7 +59,8 @@ if(navigator.userAgent.includes("iPhone")) {
 
 function grow(el) {
   page.insertBefore(el, prompt_line)
-  prompt_line.scrollIntoView(false)
+  if(document.activeElement === input)
+    prompt_line.scrollIntoView(false)
 }
 
 function new_paragraph() {
