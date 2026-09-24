@@ -1,0 +1,28 @@
+.game {
+  border: solid; margin: auto;
+  background-color: black; color: lightgray;
+  font-family: monospace; font-weight: bolder
+}
+.game > * { padding-left: 1rem; padding-right: 1rem }
+
+.prompt-line {
+   display:flex; align-items: center;
+   margin-top: 1em; padding-bottom: 1em
+}
+.prompt-line > div { flex:none }
+.prompt-line > input {
+  width:100%; border: none;
+  font: inherit; background-color: inherit; color: inherit
+}
+
+
+/***********************
+    Paragraph styles
+************************/
+
+.command { color: white }
+.athome {
+  font-family: serif; font-weight: normal;
+  color: black; background-color: whitesmoke;
+  padding-top: 1em; padding-bottom: 1em
+}
